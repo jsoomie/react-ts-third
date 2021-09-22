@@ -1,2 +1,3 @@
+export { Navbar } from "./Navbar/Navbar";
 export { Spin } from "./Spin/Spin";
-export { Navbar } from "./Navbar/Navbar" 
+export { Clicker } from "./Clicker/Clicker";
