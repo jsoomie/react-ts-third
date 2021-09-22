@@ -1,0 +1,54 @@
+:root {
+  --SPIN-SPEED: 5s;
+}
+
+#spin {
+  padding: 1vmin;
+  padding-left: 3vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spin div {
+  position: relative;
+  border: 1px solid grey;
+  height: 3vmin;
+  width: 3vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spin div div {
+  position: absolute;
+  height: 2vmin;
+  width: 2vmin;
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #spin div {
+    animation: RightSpin infinite var(--SPIN-SPEED) linear;
+  }
+}
+
+/* right spin only */
+@keyframes RightSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* left spin only */
+@keyframes LeftSpin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
