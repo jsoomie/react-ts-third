@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-#spin div {
+#spin .outterDiv {
   position: relative;
   border: 1px solid grey;
   height: 3vmin;
@@ -20,15 +20,24 @@
   align-items: center;
 }
 
-#spin div div {
+#spin .innerDiv {
   position: absolute;
   height: 2vmin;
   width: 2vmin;
+  border: 1px solid grey;
   margin: 0 auto;
 }
 
+
+/* ANIMATIONS */
 @media (prefers-reduced-motion: no-preference) {
-  #spin div {
+  #spin .outterDiv {
+    animation: RightSpin infinite var(--SPIN-SPEED) linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #spin .innerDiv {
     animation: RightSpin infinite var(--SPIN-SPEED) linear;
   }
 }
