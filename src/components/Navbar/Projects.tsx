@@ -28,7 +28,7 @@ export const Projects = () => {
         ref={dropDownRef}
       >
         <ul>
-          <li onClick={() => history.push("#")}>Clicker Counter</li>
+          <li onClick={() => refresh("/clickercounter")}>Clicker Counter</li>
           <li onClick={() => history.push("#")}>Spinner</li>
           <li onClick={() => refresh("/about")}>Testing</li>
         </ul>

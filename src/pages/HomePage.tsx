@@ -1,9 +1,7 @@
-import { Clicker } from "../components";
-
 export const HomePage = () => {
   return (
     <div id="homepage">
-      <Clicker />
+      <h1 style={{ color: "#fff", marginTop: "2rem" }}>Home Page</h1>
     </div>
   );
 };
