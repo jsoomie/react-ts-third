@@ -19,6 +19,7 @@
 
 #navbar .links li {
   padding: 1rem;
+  cursor: pointer;
 }
 
 #navbar .profile {
@@ -32,5 +33,6 @@
 
 #navbar .profile li {
   padding: 1rem;
+  cursor: pointer;
 }
 

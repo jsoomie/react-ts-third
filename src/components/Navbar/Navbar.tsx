@@ -10,9 +10,8 @@ export const Navbar = () => {
       <Spin />
       <ul className="links">
         <li onClick={() => history.push("/")}>Home</li>
+        <li>Projects</li>
         <li onClick={() => history.push("/about")}>About</li>
-        <li>Store</li>
-        <li>ETC</li>
       </ul>
       <ul className="profile">
         <li>image</li>
