@@ -1,0 +1,21 @@
+#reviewContainer {
+  color: #fff;
+  margin: 1.5rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+#reviewContainer > h1 {
+  background: linear-gradient(to left,rgba(142, 142, 171, 0.15) ,rgba(238, 242, 243, 0.15));
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+}
+
+.review-card {
+  margin: 1rem;
+  background: linear-gradient(to left, rgba(142, 142, 171, 0.15), rgba(238, 242, 243, 0.15));
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+}
