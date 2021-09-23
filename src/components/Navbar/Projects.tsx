@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useDetectOutsideClick } from "./OutsideClick";
+import { projectList } from "../../data/projectList";
 
 export const Projects = () => {
   const history = useHistory();
@@ -28,9 +29,15 @@ export const Projects = () => {
         ref={dropDownRef}
       >
         <ul>
-          <li onClick={() => refresh("/clickercounter")}>Clicker Counter</li>
-          <li onClick={() => refresh("/spinner")}>Spinner</li>
-          <li onClick={() => refresh("/about")}>Testing</li>
+          {projectList.length ? (
+            projectList.map(({ id, title, path }) => (
+              <li key={id} onClick={() => refresh(path)}>
+                {title}
+              </li>
+            ))
+          ) : (
+            <h1>No projects currently available</h1>
+          )}
         </ul>
       </nav>
     </li>
