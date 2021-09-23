@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { HomePage, AboutPage, ClickerCounterPage } from "./pages";
+import { HomePage, AboutPage, ClickerCounterPage, SpinnerPage } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/clickercounter" component={ClickerCounterPage} />
+          <Route exact path="/spinner" component={SpinnerPage} />
         </Switch>
       </Router>
     </div>

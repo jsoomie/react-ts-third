@@ -3,3 +3,4 @@ export { AboutPage } from "./AboutPage";
 
 // PROJECTS
 export { ClickerCounterPage } from "./Projects/ClickerCounterPage";
+export { SpinnerPage } from "./Projects/SpinnerPage";

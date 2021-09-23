@@ -29,7 +29,7 @@ export const Projects = () => {
       >
         <ul>
           <li onClick={() => refresh("/clickercounter")}>Clicker Counter</li>
-          <li onClick={() => history.push("#")}>Spinner</li>
+          <li onClick={() => refresh("/spinner")}>Spinner</li>
           <li onClick={() => refresh("/about")}>Testing</li>
         </ul>
       </nav>
