@@ -32,11 +32,7 @@ export const Clicker = () => {
 
   const Stage = () => (
     <div id="clicker">
-      {negative ? (
-        <h3>Negatives currently allowed</h3>
-      ) : (
-        <h3>Negatives not allowed</h3>
-      )}
+      <h3>Negatives: {negative ? "Allowed" : "Not allowed"} </h3>
       <h1>{count}</h1>
       <button className="upButton" onClick={increaseCount}>
         <TiArrowUpOutline />
