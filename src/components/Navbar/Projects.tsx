@@ -18,6 +18,10 @@ export const Projects = () => {
     setIsActive(dropDownRef, false);
   };
 
+  const filteredList = projectList.filter(
+    (project) => project.path !== "/" && project.path !== "/about"
+  );
+
   const Stage = () => (
     <li className="dropDownContainer">
       <div onClick={handelDropDownClick} className="dropdown-trigger">
@@ -29,8 +33,8 @@ export const Projects = () => {
         ref={dropDownRef}
       >
         <ul>
-          {projectList.length ? (
-            projectList.map(({ id, title, path }) => (
+          {filteredList.length ? (
+            filteredList.map(({ id, title, path }) => (
               <li key={id} onClick={() => refresh(path)}>
                 {title}
               </li>
