@@ -1,13 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {
-  HomePage,
-  AboutPage,
-  ClickerCounterPage,
-  SpinnerPage,
-  TSReviewPage,
-} from "./pages";
 import { Navbar } from "./components";
+import { projectList } from "./data/projectList";
 
 function App() {
   return (
@@ -15,11 +9,13 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/clickercounter" component={ClickerCounterPage} />
-          <Route exact path="/spinner" component={SpinnerPage} />
-          <Route exact path="/tsreview" component={TSReviewPage} />
+          {projectList.length ? (
+            projectList.map(({ id, path, component }) => (
+              <Route exact path={path} component={component} key={id} />
+            ))
+          ) : (
+            <h1>No Pages Currently Accessible</h1>
+          )}
         </Switch>
       </Router>
     </div>
