@@ -1,3 +1,42 @@
 #clicker {
   margin: 1rem;
+  color: #fff;
+}
+
+#clicker button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 295px;
+  margin: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+#clicker .upButton {
+  background-image: linear-gradient(to right, #e66465, #9198e5);
+}
+
+#clicker .upButton:hover {
+  background-position: 295px;
+}
+
+#clicker .downButton {
+  background-image: linear-gradient(to left, #e66465, #9198e5);
+}
+
+#clicker .downButton:hover {
+  background-position: 295px;
+}
+
+#clicker .negativeButton {
+  width: 600px;
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+#clicker .negativeButton:hover {
+  background-position: 300px top;
+  transform: scale(1.05);
 }
