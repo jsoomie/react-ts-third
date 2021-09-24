@@ -73,19 +73,19 @@ export const TSReview = () => {
       hobbies: ["Games", "Cards", "Not working"],
     };
 
-    let favoriteActivities: string[];
+    // let favoriteActivities: string[];
     // favoriteActivities = "running"; // This doesn't work, needs to be array
-    favoriteActivities = ["running"];
-    console.log(favoriteActivities);
+    // favoriteActivities = ["running"];
+    // console.log(favoriteActivities);
 
-    let hobby: string;
-    for (hobby of employee.hobbies) {
-      // Knows it is a string
-      console.log(hobby.toUpperCase());
+    // let hobby: string;
+    // for (hobby of employee.hobbies) {
+    // Knows it is a string
+    // console.log(hobby.toUpperCase());
 
-      // This doens't work because ts knows it is a string not array
-      // console.log(hobby.map((hobby) => hobby))
-    }
+    // This doens't work because ts knows it is a string not array
+    // console.log(hobby.map((hobby) => hobby))
+    // }
 
     return (
       <div id="array-ts" className="review-card">

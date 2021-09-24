@@ -68,7 +68,7 @@ export const TSAdvanced = () => {
 
     const printResult = (num: number): void => {
       // Type added for demo purposes only
-      console.log(`Result: ${num}`);
+      // console.log(`Result: ${num}`);
       // returns VOID
     };
 
@@ -110,7 +110,7 @@ export const TSAdvanced = () => {
     };
 
     addAndHandle(10, 20, (result) => {
-      console.log(result);
+      // console.log(result);
     });
 
     return (
