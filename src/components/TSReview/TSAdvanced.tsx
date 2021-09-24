@@ -4,10 +4,14 @@ import { v4 as uuid } from "uuid";
 export const TSAdvanced = () => {
   // UNION ///////////////////////////////////////////////////////
   const UnionTS = () => {
+    // Types
+    type Combinable = number | string;
+    type ConversionType = "as-number" | "as-text";
+
     const combine = (
-      input1: number | string,
-      input2: number | string,
-      resultType: "as-number" | "as-text" // Literal Type Union
+      input1: Combinable, // Type alias to use number or string
+      input2: Combinable,
+      resultType: ConversionType // Literal Type Union
       // Has to be those two strings states above
     ) => {
       let result;
@@ -34,7 +38,7 @@ export const TSAdvanced = () => {
 
     return (
       <div className="review-card">
-        <h2>Union and Literal Types</h2>
+        <h2>Union / Literal /Type Aliases</h2>
         <ul>
           <li>{combinedAges}</li>
           <li>{combinedNames}</li>
@@ -43,17 +47,29 @@ export const TSAdvanced = () => {
         <p>
           Allows the use of 2 or more types in items that needs it. Literal
           Types are for specific types set to something and only those types are
-          valid.{" "}
+          valid. Use type aliases to make it reusable of a certain type
+          inputted.
         </p>
       </div>
     );
   };
   // UNION //
 
+  // FUNCTION RETURN TYPES ///////////////////////////////////////
+  const FunctionsTS = () => {
+    return (
+      <div className="review-card">
+        <h2>Function Types</h2>
+      </div>
+    );
+  };
+  // FUNCTION RETURN TYPES //
+
   // STAGE ///////////////////////////////////////////////////////
   const Stage = () => {
     const data = [
       { func: <UnionTS /> },
+      { func: <FunctionsTS /> },
       // Add new functions here
     ];
 
