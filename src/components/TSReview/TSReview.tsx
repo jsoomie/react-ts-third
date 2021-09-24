@@ -188,7 +188,7 @@ export const TSReview = () => {
           <li>Mana Pool: {kain.mana}</li>
           <li>Talents: {kain.talents.join(", ")}</li>
           <li>
-            Rank: #{kain.rank} - {Rank[kain.rank].toLocaleLowerCase()}
+            Rank: #{kain.rank} - {Rank[kain.rank].toLowerCase()}
           </li>
         </ul>
         <p>Automatically enumerated global constant identifiers</p>
