@@ -204,7 +204,7 @@ export const TSReview = () => {
         <h2>Any</h2>
         <p>
           Allows users to use any types on a certain item. Just like vanilla
-          object. Only use any as a last resort.
+          javascript. Only use any as a last resort.
         </p>
       </div>
     );
