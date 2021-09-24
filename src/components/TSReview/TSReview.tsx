@@ -1,4 +1,5 @@
 import "./TSReview.css";
+import { v4 as uuid } from "uuid";
 
 export const TSReview = () => {
   // Core Types: number, string, boolean ////
@@ -60,12 +61,51 @@ export const TSReview = () => {
   };
   // Core Types: Object //
 
-  // STAGE ////
+  // Arrays /////
+
+  const ArrayTS = () => {
+    const employee = {
+      name: "James",
+      age: 30,
+      hobbies: [],
+    };
+
+    return (
+      <div id="array-ts" className="review-card">
+        <h2>Arrays</h2>
+      </div>
+    );
+  };
+
+  // Arrays //
+
+  // LOOP ////////////////////////////////////////////////////////
+  const data = [
+    {
+      func: <Basic />,
+    },
+    {
+      func: <ObjectTS />,
+    },
+    {
+      func: <ArrayTS />,
+    },
+  ];
+
+  //Adds random ID to list
+  const newData = data.map((data) => {
+    return { ...data, id: uuid() };
+  });
+
+  // STAGE ///////////////////////////////////////////////////////
   const Stage = () => (
     <div id="reviewContainer">
       <h1>TS review page</h1>
-      <Basic />
-      <ObjectTS />
+      {newData.length ? (
+        newData.map(({ id, func }) => <div key={id}>{func}</div>)
+      ) : (
+        <p>No Data Available</p>
+      )}
     </div>
   );
   return <Stage />;
