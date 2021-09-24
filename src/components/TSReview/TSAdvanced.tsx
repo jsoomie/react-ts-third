@@ -57,9 +57,32 @@ export const TSAdvanced = () => {
 
   // FUNCTION RETURN TYPES ///////////////////////////////////////
   const FunctionsTS = () => {
+    // Leave it to type inferrence
+    const adding = (n1: number, n2: number): number => {
+      // Type added for demo purposes
+      return n1 + n2; // Returns Number type
+      // return n1.toString() + n2.toString(); // Returns string type
+    };
+
+    const printResult = (num: number): void => {
+      // Type added for demo purposes only
+      console.log(`Result: ${num}`);
+      // returns VOID
+    };
+
+    printResult(1);
+
     return (
       <div className="review-card">
         <h2>Function Types</h2>
+        <ul>
+          <li>{adding(1, 2)}</li>
+        </ul>
+        <p>
+          Functions not returning anything is returning type void. Undefined is
+          also a thing, but normally void is used unless undefined is a must
+          returned item for whatever use.
+        </p>
       </div>
     );
   };
