@@ -77,7 +77,6 @@ export const TSAdvanced = () => {
     // Specifying function type
     let combinedStuff: (x: number, b: number) => number;
     combinedStuff = adding;
-    console.log(combinedStuff(8, 8));
     // combinedStuff = printResult;
     // Doesn't work because wrong amount of params and type of
 
@@ -86,6 +85,7 @@ export const TSAdvanced = () => {
         <h2>Function Types</h2>
         <ul>
           <li>{adding(1, 2)}</li>
+          <li>{combinedStuff(1000, 24000)}</li>
         </ul>
         <p>
           Functions not returning anything is returning type void. Undefined is
@@ -100,9 +100,28 @@ export const TSAdvanced = () => {
 
   // CALLBACK ////////////////////////////////////////////////////
   const CallbackTS: StageReturn = () => {
+    const addAndHandle = (
+      n1: number,
+      n2: number,
+      cb: (num: number) => void
+    ) => {
+      const result = n1 + n2;
+      cb(result);
+    };
+
+    addAndHandle(10, 20, (result) => {
+      console.log(result);
+    });
+
     return (
       <div className="review-card">
         <h2>Callbacks</h2>
+        <p>
+          Callbacks in functions ts can be very strict with the callbacks and
+          setting to return to void to avoid returning anything. Void and then
+          theres never type intended for error catching where it would crash the
+          script. They can also be void, but specifically is never.
+        </p>
       </div>
     );
   };
