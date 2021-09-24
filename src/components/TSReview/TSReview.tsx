@@ -106,20 +106,21 @@ export const TSReview = () => {
   // Arrays //
 
   // TUPLES //////////////////////////////////////////////////////
-
+  const TuplesTS = () => {
+    return (
+      <div id="tuples-ts" className="review-card">
+        <h1>Tuples</h1>
+      </div>
+    );
+  };
   // TUPLES //
 
   // LOOP ////////////////////////////////////////////////////////
   const data = [
-    {
-      func: <Basic />,
-    },
-    {
-      func: <ObjectTS />,
-    },
-    {
-      func: <ArrayTS />,
-    },
+    { func: <Basic /> },
+    { func: <ObjectTS /> },
+    { func: <ArrayTS /> },
+    { func: <TuplesTS /> },
   ];
 
   //Adds random ID to list
