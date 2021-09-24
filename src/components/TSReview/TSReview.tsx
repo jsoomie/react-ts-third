@@ -4,6 +4,7 @@ import { v4 as uuid } from "uuid";
 export const TSReview = () => {
   // Core Types: number, string, boolean /////////////////////////
   const Basic = () => {
+    const hello: string = "hello world";
     const firstNumber = 5;
     const secondNumber = 2.3;
     const result = true;
@@ -18,7 +19,9 @@ export const TSReview = () => {
     return (
       <div id="basic-ts" className="review-card">
         <h2>Number, String, Boolean</h2>
-        <p>{add(firstNumber, secondNumber, result)}</p>
+        <h4>number: {add(firstNumber, secondNumber, result)}</h4>
+        <h4>string: {hello}</h4>
+        {result && <h4>boolean: true</h4>}
         <p>
           Created an adding function with specific types for the params which
           only takes in numbers for the first two and a boolean for the second.
@@ -107,13 +110,14 @@ export const TSReview = () => {
 
   // TUPLES //////////////////////////////////////////////////////
   const TuplesTS = () => {
-    type IMember = {
+    type MemberType = {
       name: string;
       age: 12;
       hobbies: string[];
       role: [number, string];
     };
-    const member: IMember = {
+
+    const member: MemberType = {
       name: "Alice",
       age: 12,
       hobbies: ["Reading", "Exploring"],
@@ -152,12 +156,54 @@ export const TSReview = () => {
   };
   // TUPLES //
 
+  // ENUMS ///////////////////////////////////////////////////////
+  const EnumsTS = () => {
+    // const NOVICE = 0;
+    // const AMATEUR = 1;
+    // const PRACTITIONER = 3;
+    // console.log(NOVICE, AMATEUR, PRACTITIONER);
+    // using enums so to condense code above //
+
+    enum Rank {
+      NOVICE,
+      AMATEUR,
+      PRACTITIONER,
+    }
+
+    const kain = {
+      name: "Kain",
+      class: "Warrior",
+      mana: 124,
+      talents: ["Chef II", "Blacksmith III", "Symbology I"],
+      // rank: Rank[Rank.NOVICE].toLocaleLowerCase(),
+      rank: Rank.PRACTITIONER,
+    };
+
+    return (
+      <div id="enums-ts" className="review-card">
+        <h2>Enums</h2>
+        <ul>
+          <li>Name: {kain.name}</li>
+          <li>Class: {kain.class}</li>
+          <li>Mana Pool: {kain.mana}</li>
+          <li>Talents: {kain.talents.join(", ")}</li>
+          <li>
+            Rank: #{kain.rank} - {Rank[kain.rank].toLocaleLowerCase()}
+          </li>
+        </ul>
+        <p>Automatically enumerated global constant identifiers</p>
+      </div>
+    );
+  };
+  // ENUMS //
+
   // LOOP ////////////////////////////////////////////////////////
   const data = [
     { func: <Basic /> },
     { func: <ObjectTS /> },
     { func: <ArrayTS /> },
     { func: <TuplesTS /> },
+    { func: <EnumsTS /> },
     // Add new functions here
   ];
 

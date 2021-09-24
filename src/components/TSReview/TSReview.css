@@ -13,6 +13,25 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+#reviewContainer h2 {
+  margin-bottom: 0.5rem;
+}
+
+#reviewContainer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviewContainer li {
+  padding: 0 0.5rem;
+}
+
+#reviewContainer p {
+  border-top: 1px solid #fff;
+  margin-top: 1rem;
+}
+
 .review-card {
   margin: 1rem;
   background: linear-gradient(to left, rgba(142, 142, 171, 0.15), rgba(238, 242, 243, 0.15));
@@ -22,64 +41,7 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#basic-ts h2 {
-  margin-bottom: 0.5rem;
-}
-
-#basic-ts p:nth-child(3) {
-  border-top: 1px solid #fff;
-  margin-top: 1rem;
-}
-
-#object-ts ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#object-ts li {
-  padding: 0.5rem;
-}
-
-#object-ts p {
-  border-top: 1px solid #fff;
-  margin-top: 1rem;
-}
-
-#array-ts ul {
-  display: flex;
-  justify-content: center;
-}
-
-#array-ts li {
-  padding: 1rem;
-}
-
 #array-ts ul:nth-child(3) li {
   margin: 0;
   padding: 0 0.5rem;
-}
-
-#array-ts p {
-  border-top: 1px solid #fff;
-  margin-top: 1rem;
-}
-
-#tuples-ts ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#tuples-ts h2 {
-  margin-bottom: 0.5rem;
-}
-
-#tuples-ts li {
-  padding: 0 0.5rem;
-}
-
-#tuples-ts p {
-  border-top: 1px solid #fff;
-  margin-top: 1rem;
 }
