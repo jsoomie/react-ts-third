@@ -18,25 +18,43 @@ export const TSReview = () => {
       <div id="basic-ts" className="review-card">
         <h2>Number, String, Boolean</h2>
         <p>{add(firstNumber, secondNumber, result)}</p>
+        <p>
+          Created an adding function with specific types for the params which
+          only takes in numbers for the first two and a boolean for the second.
+        </p>
       </div>
     );
   };
   // Core Types: number, string, boolean //
 
   // Core Types: Object ////
+  // Types are usually inferred, however did this just for testing
+  // Normal best practice is to let ts do its thing.
   const ObjectTS = () => {
-    const person = {
+    type PersonObject = {
+      name: string;
+      age: number;
+      occupation: string;
+    };
+
+    const person: PersonObject = {
       name: "Kena",
       age: 20,
+      occupation: "Spirit Guide",
     };
 
     return (
       <div id="object-ts" className="review-card">
         <h2>Objects</h2>
         <ul>
-          <li>{person.name}</li>
-          <li>{person.age}</li>
+          <li>Name: {person.name}</li>
+          <li>Age: {person.age}</li>
+          <li>Occupation: {person.occupation}</li>
         </ul>
+        <p>
+          Types are usually inferred and best practice is to let it do its
+          thing.
+        </p>
       </div>
     );
   };
