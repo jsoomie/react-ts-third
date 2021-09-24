@@ -197,6 +197,20 @@ export const TSReview = () => {
   };
   // ENUMS //
 
+  // ANY /////////////////////////////////////////////////////////
+  const AnyTS = () => {
+    return (
+      <div className="review-card">
+        <h2>Any</h2>
+        <p>
+          Allows users to use any types on a certain item. Just like vanilla
+          object. Only use any as a last resort.
+        </p>
+      </div>
+    );
+  };
+  // ANY //
+
   // LOOP ////////////////////////////////////////////////////////
   const data = [
     { func: <Basic /> },
@@ -204,6 +218,7 @@ export const TSReview = () => {
     { func: <ArrayTS /> },
     { func: <TuplesTS /> },
     { func: <EnumsTS /> },
+    { func: <AnyTS /> },
     // Add new functions here
   ];
 
