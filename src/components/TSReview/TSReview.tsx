@@ -2,7 +2,7 @@ import "./TSReview.css";
 import { v4 as uuid } from "uuid";
 
 export const TSReview = () => {
-  // Core Types: number, string, boolean ////
+  // Core Types: number, string, boolean /////////////////////////
   const Basic = () => {
     const firstNumber = 5;
     const secondNumber = 2.3;
@@ -28,7 +28,7 @@ export const TSReview = () => {
   };
   // Core Types: number, string, boolean //
 
-  // Core Types: Object ////
+  // Core Types: Object //////////////////////////////////////////
   // Types are usually inferred, however did this just for testing
   // Normal best practice is to let ts do its thing.
   const ObjectTS = () => {
@@ -61,7 +61,7 @@ export const TSReview = () => {
   };
   // Core Types: Object //
 
-  // Arrays /////
+  // Arrays //////////////////////////////////////////////////////
   const ArrayTS = () => {
     const employee = {
       name: "James",
@@ -74,7 +74,8 @@ export const TSReview = () => {
     favoriteActivities = ["running"];
     console.log(favoriteActivities);
 
-    for (const hobby of employee.hobbies) {
+    let hobby: string;
+    for (hobby of employee.hobbies) {
       // Knows it is a string
       console.log(hobby.toUpperCase());
 
@@ -103,6 +104,10 @@ export const TSReview = () => {
     );
   };
   // Arrays //
+
+  // TUPLES //////////////////////////////////////////////////////
+
+  // TUPLES //
 
   // LOOP ////////////////////////////////////////////////////////
   const data = [
