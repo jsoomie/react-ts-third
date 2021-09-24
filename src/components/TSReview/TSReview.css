@@ -45,3 +45,22 @@
   border-top: 1px solid #fff;
   margin-top: 1rem;
 }
+
+#array-ts ul {
+  display: flex;
+  justify-content: center;
+}
+
+#array-ts li {
+  padding: 1rem;
+}
+
+#array-ts ul:nth-child(3) li {
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+#array-ts p {
+  border-top: 1px solid #fff;
+  margin-top: 1rem;
+}

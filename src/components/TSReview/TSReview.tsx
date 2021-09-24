@@ -62,21 +62,46 @@ export const TSReview = () => {
   // Core Types: Object //
 
   // Arrays /////
-
   const ArrayTS = () => {
     const employee = {
       name: "James",
       age: 30,
-      hobbies: [],
+      hobbies: ["Games", "Cards", "Not working"],
     };
+
+    let favoriteActivities: string[];
+    // favoriteActivities = "running"; // This doesn't work, needs to be array
+    favoriteActivities = ["running"];
+    console.log(favoriteActivities);
+
+    for (const hobby of employee.hobbies) {
+      // Knows it is a string
+      console.log(hobby.toUpperCase());
+
+      // This doens't work because ts knows it is a string not array
+      // console.log(hobby.map((hobby) => hobby))
+    }
 
     return (
       <div id="array-ts" className="review-card">
         <h2>Arrays</h2>
+        <ul>
+          <li>Name: {employee.name}</li>
+          <li>Age: {employee.age}</li>
+        </ul>
+        <ul>
+          <li>Hobbies from array in object: </li>
+          {employee.hobbies.map((hobby) => (
+            <li key={uuid()}>{hobby.toLocaleUpperCase()}</li>
+          ))}
+        </ul>
+        <p>
+          Arrays from objects are inferred as such and ts knows it to be of
+          certain types.
+        </p>
       </div>
     );
   };
-
   // Arrays //
 
   // LOOP ////////////////////////////////////////////////////////
