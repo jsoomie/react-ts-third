@@ -1,9 +1,11 @@
 import "./TSReview.css";
 import { v4 as uuid } from "uuid";
 
+type StageReturn = () => JSX.Element;
+
 export const TSAdvanced = () => {
   // UNION ///////////////////////////////////////////////////////
-  const UnionTS = () => {
+  const UnionTS: StageReturn = () => {
     // Types
     type Combinable = number | string;
     type ConversionType = "as-number" | "as-text";
@@ -56,7 +58,7 @@ export const TSAdvanced = () => {
   // UNION //
 
   // FUNCTION RETURN TYPES ///////////////////////////////////////
-  const FunctionsTS = () => {
+  const FunctionsTS: StageReturn = () => {
     // Leave it to type inferrence
     const adding = (n1: number, n2: number): number => {
       // Type added for demo purposes
@@ -72,6 +74,13 @@ export const TSAdvanced = () => {
 
     printResult(1);
 
+    // Specifying function type
+    let combinedStuff: (x: number, b: number) => number;
+    combinedStuff = adding;
+    console.log(combinedStuff(8, 8));
+    // combinedStuff = printResult;
+    // Doesn't work because wrong amount of params and type of
+
     return (
       <div className="review-card">
         <h2>Function Types</h2>
@@ -81,18 +90,30 @@ export const TSAdvanced = () => {
         <p>
           Functions not returning anything is returning type void. Undefined is
           also a thing, but normally void is used unless undefined is a must
-          returned item for whatever use.
+          returned item for whatever use. Function Types allows us to specify
+          which types of function we want passed in.
         </p>
       </div>
     );
   };
   // FUNCTION RETURN TYPES //
 
+  // CALLBACK ////////////////////////////////////////////////////
+  const CallbackTS: StageReturn = () => {
+    return (
+      <div className="review-card">
+        <h2>Callbacks</h2>
+      </div>
+    );
+  };
+  // CALLBACK //
+
   // STAGE ///////////////////////////////////////////////////////
   const Stage = () => {
     const data = [
       { func: <UnionTS /> },
       { func: <FunctionsTS /> },
+      { func: <CallbackTS /> },
       // Add new functions here
     ];
 
