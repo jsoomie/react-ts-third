@@ -5,6 +5,7 @@
   line-height: 1.5rem;
 }
 
+#advancedContainer > h1,
 #reviewContainer > h1 {
   background: linear-gradient(to left,rgba(142, 142, 171, 0.15) ,rgba(238, 242, 243, 0.15));
   border-radius: 10px;

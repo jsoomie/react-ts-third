@@ -1,5 +1,6 @@
 import "./TSReview.css";
 import { v4 as uuid } from "uuid";
+import { TSAdvanced } from "./TSAdvanced";
 
 export const TSReview = () => {
   // Core Types: number, string, boolean /////////////////////////
@@ -211,33 +212,35 @@ export const TSReview = () => {
   };
   // ANY //
 
-  // LOOP ////////////////////////////////////////////////////////
-  const data = [
-    { func: <Basic /> },
-    { func: <ObjectTS /> },
-    { func: <ArrayTS /> },
-    { func: <TuplesTS /> },
-    { func: <EnumsTS /> },
-    { func: <AnyTS /> },
-    // Add new functions here
-  ];
-
-  //Adds random ID to list
-  const newData = data.map((data) => {
-    return { ...data, id: uuid() };
-  });
-
   // STAGE ///////////////////////////////////////////////////////
-  const Stage = () => (
-    <div id="reviewContainer">
-      <h1>TS review page</h1>
-      {newData.length ? (
-        newData.map(({ id, func }) => <div key={id}>{func}</div>)
-      ) : (
-        <p>No Data Available</p>
-      )}
-    </div>
-  );
+  const Stage = () => {
+    const data = [
+      { func: <Basic /> },
+      { func: <ObjectTS /> },
+      { func: <ArrayTS /> },
+      { func: <TuplesTS /> },
+      { func: <EnumsTS /> },
+      { func: <AnyTS /> },
+      { func: <TSAdvanced /> },
+      // Add new functions here
+    ];
+
+    //Adds random ID to list
+    const newData = data.map((data) => {
+      return { ...data, id: uuid() };
+    });
+
+    return (
+      <div id="reviewContainer">
+        <h1>TS REVIEW PAGE</h1>
+        {newData.length ? (
+          newData.map(({ id, func }) => <div key={id}>{func}</div>)
+        ) : (
+          <p>No Data Available</p>
+        )}
+      </div>
+    );
+  };
   return <Stage />;
 };
 
