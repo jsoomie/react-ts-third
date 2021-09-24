@@ -120,7 +120,9 @@ export const TSAdvanced = () => {
           Callbacks in functions ts can be very strict with the callbacks and
           setting to return to void to avoid returning anything. Void and then
           theres never type intended for error catching where it would crash the
-          script. They can also be void, but specifically is never.
+          script. They can also be void, but specifically is never. Uknown can
+          also be used, but in place of any. Still not to be used like any but
+          to be preferred over any.
         </p>
       </div>
     );
