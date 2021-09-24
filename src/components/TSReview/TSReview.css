@@ -64,3 +64,22 @@
   border-top: 1px solid #fff;
   margin-top: 1rem;
 }
+
+#tuples-ts ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tuples-ts h2 {
+  margin-bottom: 0.5rem;
+}
+
+#tuples-ts li {
+  padding: 0 0.5rem;
+}
+
+#tuples-ts p {
+  border-top: 1px solid #fff;
+  margin-top: 1rem;
+}

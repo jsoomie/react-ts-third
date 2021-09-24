@@ -107,9 +107,46 @@ export const TSReview = () => {
 
   // TUPLES //////////////////////////////////////////////////////
   const TuplesTS = () => {
+    type IMember = {
+      name: string;
+      age: 12;
+      hobbies: string[];
+      role: [number, string];
+    };
+    const member: IMember = {
+      name: "Alice",
+      age: 12,
+      hobbies: ["Reading", "Exploring"],
+      // At first, ts creates union array of number | string
+      // However, we ONLY want 2 things in the array
+      // role: [2, "jumper"],
+      // memeber.role.push("this works");
+      role: [2, "jumper"],
+    };
+
+    member.role.push("Still Works, unfortunately");
+    // member.role[1] = 10; // this errors out
+    member.role = [0, "new role"]; // Works as well
+    // member.role = [0, "hello world", "blah"] // Errors
+
     return (
       <div id="tuples-ts" className="review-card">
-        <h1>Tuples</h1>
+        <h2>Tuples</h2>
+        <ul>
+          <li>Name: {member.name}</li>
+          <li>Age: {member.age}</li>
+          <li>Hobbies: </li>
+          {member.hobbies.map((hobby) => (
+            <li key={uuid()}>{hobby}</li>
+          ))}
+          <li>Role Number: {member.role[0]}</li>
+          <li>Role Name: {member.role[1].toUpperCase()}</li>
+        </ul>
+        <p>
+          TS will only catch tuples TYPES, if specified 2 types, those types
+          will be enforced, however, if pushing an item from outside, TS won't
+          catch that
+        </p>
       </div>
     );
   };
@@ -121,6 +158,7 @@ export const TSReview = () => {
     { func: <ObjectTS /> },
     { func: <ArrayTS /> },
     { func: <TuplesTS /> },
+    // Add new functions here
   ];
 
   //Adds random ID to list
